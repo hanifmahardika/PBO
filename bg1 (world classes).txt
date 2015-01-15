@@ -1,0 +1,28 @@
+public class bg1 extends World
+{
+
+    /**
+     * Constructor for objects of class bg1.
+     * 
+     */
+    public bg1()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(900, 500, 1); 
+
+        prepare();
+    }
+
+    /**
+     * Prepare the world for the start of the program. That is: create the initial
+     * objects and add them to the world.
+     */
+    private void prepare()
+    {
+        obj2 obj2 = new obj2();
+        addObject(obj2, 604, 162);
+        obj2.setLocation(131, 225);
+        obj1 obj1 = new obj1();
+        addObject(obj1, 490, 38);
+    }
+}

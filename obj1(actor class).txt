@@ -1,0 +1,21 @@
+public class obj1 extends Actor
+{
+    /**
+     * Act - do whatever the obj1 wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
+    {
+        // Add your action code here.
+        move (5);
+        if (isAtEdge())
+        turn(Greenfoot.getRandomNumber(100));
+        obj2 a=(obj2)getOneIntersectingObject(obj2.class);
+        if(a!=null)
+        {
+            System.out.println("Bola menabrak lebah!!!!");
+            getWorld().removeObject(a);
+            return;
+        }   
+    }
+}
